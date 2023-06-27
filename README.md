@@ -392,12 +392,11 @@ THIS IS A LEFT OUTER JOIN
 
 db.users.aggregate([
 	{$lookup:
-	{
-		"from": "comments",
-		"localField": "name",
-		"foreignField": "name",
-		"as": "comments"
-	}
-	
+		{
+			"from": "comments",
+			"localField": "name",
+			"foreignField": "name",
+			"as": "comments"
+		}
 	}
 ])
